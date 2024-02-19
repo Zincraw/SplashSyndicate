@@ -1,3 +1,3 @@
 This is the main page of Splash Syndicate Github, any questions to Antonio Santos
 
-I'm Salva, btw
+I'm Ivan, btw
