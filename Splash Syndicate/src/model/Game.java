@@ -55,7 +55,9 @@ public class Game {
 
 	@Override
 	public String toString() {
-		return "Game [name=" + name + ", platform=" + platform + ", year=" + year + ", publisher=" + publisher + "]";
+		return "Game [name=" + name + ", platform=" + platform + ", genre=" + genre.getGenre()
+		+ ", year=" + year + ", publisher="
+				+ publisher + "]";
 	}
 
 }
