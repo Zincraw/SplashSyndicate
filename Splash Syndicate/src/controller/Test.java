@@ -5,6 +5,7 @@ import java.util.Map;
 import data.Catalogue;
 import model.Game;
 import model.Genre;
+import services.CatalogueManagement;
 
 public class Test {
 	
@@ -21,6 +22,11 @@ public class Test {
 			Game game = entry.getValue();
 			System.out.println("ID: [" + gameId + "] \nGame: " + game);
 		}
+	}
+	
+	public static void testCatalogueManagement() {
+		CatalogueManagement catalogueManagement = new CatalogueManagement();
+		System.out.println(catalogueManagement.getCatalogue().getMap().get(3));
 	}
 
 }

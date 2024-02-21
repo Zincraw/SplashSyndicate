@@ -5,6 +5,7 @@ public class Main {
 		
 		//Test.testGameClass();
 		//Test.testCatalogueClass();
+		//Test.testCatalogueClass();
 		Menu menu = new Menu();
         menu.start();
 	}
