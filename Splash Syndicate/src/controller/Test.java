@@ -22,5 +22,4 @@ public class Test {
 			System.out.println("ID: [" + gameId + "] \nGame: " + game);
 		}
 	}
-
 }
