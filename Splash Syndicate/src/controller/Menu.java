@@ -2,8 +2,18 @@ package controller;
 
 import java.util.Scanner;
 
+import services.CatalogueManagement;
+
 public class Menu {
+	
+	private CatalogueManagement catalogueManagement = new CatalogueManagement();
+	
+	public Menu() {
+		
+	}
+	
 	@SuppressWarnings("resource")
+	
 	public void start() {
 		
 		int option;
@@ -26,27 +36,27 @@ public class Menu {
             
             switch (option) {
 	            case 1:
-	                timeLapseForAnswer();
+	                
 	                break;
 	            case 2:
-	            	timeLapseForAnswer();
+	            	
 	                break;
 	            case 3:
-	            	timeLapseForAnswer();
+	            	
 	            	break;
 	            case 4:
-	            	timeLapseForAnswer();
+	            	
 	                break;
 	            case 5:
-	            	timeLapseForAnswer();
+	            	
 	                break;
 	            case 6:
-	            	timeLapseForAnswer();
+	            	
 	                break;
 	            case 7:
 	                break;
 	            case 8:
-	            	timeLapseForAnswer();
+	            	
 	                break;
 	            case 0:
 	                System.out.println("See you next time!");
@@ -57,10 +67,19 @@ public class Menu {
             }
 		} while (option != 0);
 	}
-	@SuppressWarnings("resource")
-	public static void timeLapseForAnswer() {
-        System.out.println("\n\nPress any key to continue");
-        
-        new Scanner(System.in).nextLine();
+
+	public CatalogueManagement getCatalogueManagement() {
+		return catalogueManagement;
 	}
+
+	public void setCatalogueManagement(CatalogueManagement catalogueManagement) {
+		this.catalogueManagement = catalogueManagement;
+	}
+
+	@Override
+	public String toString() {
+		return "Menu [catalogueManagement=" + catalogueManagement + "]";
+	}
+	
+	
 }
