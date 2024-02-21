@@ -1,4 +1,4 @@
-package GUI;
+package controller;
 
 import java.util.Scanner;
 
