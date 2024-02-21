@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1708430603816_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1708430603826_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1708431726558_3" label="Proyect1" name="Proyect1">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Splash Syndicate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Splash Syndicate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Splash Syndicate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Splash Syndicate" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1708430604932_2" label="Window Working Set" name="Aggregate for window 1708430604932"/>
+<mruList name="Proyect1"/>
+</workingSetManager>
