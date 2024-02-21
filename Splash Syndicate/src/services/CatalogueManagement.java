@@ -9,4 +9,18 @@ public class CatalogueManagement {
 	public CatalogueManagement() {
 		catalogue = new Catalogue();
 	}
+
+	public Catalogue getCatalogue() {
+		return catalogue;
+	}
+
+	public void setCatalogue(Catalogue catalogue) {
+		this.catalogue = catalogue;
+	}
+
+	@Override
+	public String toString() {
+		return "CatalogueManagement [catalogue=" + catalogue + "]";
+	}
+	
 }
