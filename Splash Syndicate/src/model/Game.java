@@ -11,7 +11,7 @@ public class Game {
 		
 	}
 	
-	public Game(String name, String platform, Genre genre, int year, String publisher) {
+	public Game(String name, String platform,Genre genre, int year, String publisher) {
 		super();
 		this.name = name;
 		this.platform = platform;
