@@ -23,10 +23,13 @@ public class Test {
 			System.out.println("ID: [" + gameId + "] \nGame: " + game);
 		}
 	}
+<<<<<<< HEAD
 	
 	public static void testCatalogueManagement() {
 		CatalogueManagement catalogueManagement = new CatalogueManagement();
 		System.out.println(catalogueManagement.getCatalogue().getMap().get(3));
 	}
 
+=======
+>>>>>>> ebe673faf057bc961339395d266bf1202c11a5e8
 }
