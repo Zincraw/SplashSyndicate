@@ -1,8 +1,7 @@
 package controller;
 
-import java.util.Scanner;
-
 import services.CatalogueManagement;
+import utilities.ReadData;
 
 public class Menu {
 	
@@ -32,7 +31,7 @@ public class Menu {
             System.out.println("0) Exit");
             System.out.println("Choose an option");
             
-            option = new Scanner(System.in).nextInt();
+            option = ReadData.valReadInt();
             
             switch (option) {
 	            case 1:
