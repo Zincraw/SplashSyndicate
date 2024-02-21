@@ -1,12 +1,10 @@
 package controller;
 
-import GUI.Menu;
-
 public class Main {
 	public static void main(String[] args) {
 		
 		//Test.testGameClass();
-		
+		//Test.testCatalogueClass();
 		Menu menu = new Menu();
         menu.start();
 	}
