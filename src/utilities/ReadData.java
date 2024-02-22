@@ -8,8 +8,8 @@ public class ReadData {
 		return new Scanner(System.in).nextInt();
 	}
 
-	public static int readInt(String msj) {
-		System.out.println(msj);
+	public static int readInt(String msg) {
+		System.out.println(msg);
 		return readInt();
 	}
 
@@ -17,19 +17,19 @@ public class ReadData {
 		return new Scanner(System.in).nextLine();
 	}
 
-	public static String readString(String msj) {
-		System.out.println(msj);
+	public static String readString(String msg) {
+		System.out.println(msg);
 		return readString();
 	}
 
-	public static int valReadInt() {
+	public static int valReadInt(String msg) {
 		int option = 0;
 		try {
-			option = readInt();
+			option = readInt(msg);
 			return option;
 		} catch (InputMismatchException ex) {
 			System.out.println("You must put a integer number. Try again");
-			return valReadInt();
+			return valReadInt(msg);
 		}
 	}
 }
