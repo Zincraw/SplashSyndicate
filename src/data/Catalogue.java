@@ -38,8 +38,7 @@ public class Catalogue {
 				String publisher = gameDataSplitted[5];
 				
 				Game game = new Game(name, platform, genre, year, publisher);
-				int gameId = generateId();
-				map.put(gameId, game);
+				map.put(generateId(), game);
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -54,8 +53,7 @@ public class Catalogue {
 	}
 	
 	public void registerNewGame(Game game) {
-		Game newGame = new Game();
-		
+		map.put(generateId(),game);
 	}
 	
 	private int generateId() {
