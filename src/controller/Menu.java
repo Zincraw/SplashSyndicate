@@ -29,16 +29,15 @@ public class Menu {
             System.out.println("7) List all games by genre");
             System.out.println("8) List games by odd years!");
             System.out.println("0) Exit");
-            System.out.println("Choose an option");
             
-            option = ReadData.valReadInt();
+            option = ReadData.valReadInt("Choose an option");
             
             switch (option) {
 	            case 1:
-	                
+	                printCatalogue();
 	                break;
 	            case 2:
-	            	
+	            	registerNewGame();
 	                break;
 	            case 3:
 	            	
@@ -80,5 +79,14 @@ public class Menu {
 		return "Menu [catalogueManagement=" + catalogueManagement + "]";
 	}
 	
+	public void printCatalogue() {
+		catalogueManagement.printAllCatalogue();
+		start();
+	}
+	
+	public void registerNewGame() {
+		catalogueManagement.registerNewGame();
+		System.out.println("Game added successfully!");
+	}
 	
 }
