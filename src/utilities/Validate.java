@@ -1,6 +1,5 @@
 package utilities;
 
-import java.util.InputMismatchException;
 import model.Genre;
 
 public class Validate {
