@@ -79,6 +79,20 @@ public class TestCatalogueManagement {
 		assertEquals(CatalogueGamesCount, NewCatalogueGamesCount );
 	}
 	
-	
+	@Test
+	public void isGameSuccesfullyAdded() {
+		CatalogueManagement catalogueManagement = new CatalogueManagement();
+		
+		catalogueManagement.registerNewGame();
+
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream ();
+		
+		System.setOut(new PrintStream(outContent));
+		catalogueManagement.printAllCatalogue();		
+
+		int printedGamesCount = outContent.toString().split("\n").length / 6;
+		int CatalogueGamesCount = catalogueManagement.getCatalogue().getData().size();
+		assertEquals(printedGamesCount, CatalogueGamesCount );
+	}
 	
 }
