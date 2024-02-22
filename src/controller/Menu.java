@@ -89,4 +89,8 @@ public class Menu {
 		System.out.println("Game added successfully!");
 	}
 	
+	public void filterGamesByPublisher () {
+		catalogueManagement.filterGamesByPublisher();
+	}
+	
 }

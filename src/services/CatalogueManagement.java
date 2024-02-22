@@ -78,4 +78,8 @@ public class CatalogueManagement {
         
 	    return genre; 
 	}
+	
+	public void filterGamesByPublisher(){
+		
+	}
 }
