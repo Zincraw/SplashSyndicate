@@ -14,6 +14,7 @@ public class TestCatalogueManagement {
 	
 	@Test
 	public void isGameLoadedCorrectlyTrue() {
+
 		Catalogue catalogue = new Catalogue();
 		int numberOfLines = 0;
 		
@@ -24,7 +25,6 @@ public class TestCatalogueManagement {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 		assertEquals(numberOfLines, catalogue.getMap().size() + 1);
 	}
 	
