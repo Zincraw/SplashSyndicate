@@ -53,6 +53,11 @@ public class Catalogue {
 		}
 	}
 	
+	public void registerNewGame(Game game) {
+		Game newGame = new Game();
+		
+	}
+	
 	private int generateId() {
 		Random rnd = new Random();
 		int newId;
