@@ -11,6 +11,8 @@ import java.nio.file.Paths;
 import org.junit.Test;
 
 import data.Catalogue;
+import model.Game;
+import model.Genre;
 
 public class TestCatalogueManagement {
 	
@@ -60,5 +62,23 @@ public class TestCatalogueManagement {
 		int CatalogueGamesCount = catalogueManagement.getCatalogue().getData().size();
 		assertEquals(printedGamesCount, CatalogueGamesCount );
 	}
+	
+	@Test
+	public void isExistedGameDeniedTrue() {
+		CatalogueManagement catalogueManagement = new CatalogueManagement();
+		Catalogue catalogue = catalogueManagement.getCatalogue();
+		Genre action = Genre.ACTION;
+				
+		Game gameTest = new Game("lol", "PC", action, 2009, "Riot");
+		catalogue.registerNewGame(gameTest);
+		int CatalogueGamesCount = catalogue.getData().size();
+		
+		catalogueManagement.registerNewGame();
+		int NewCatalogueGamesCount = catalogue.getData().size();
+		
+		assertEquals(CatalogueGamesCount, NewCatalogueGamesCount );
+	}
+	
+	
 	
 }
