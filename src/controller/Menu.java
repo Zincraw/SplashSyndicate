@@ -37,7 +37,7 @@ public class Menu {
 	                printCatalogue();
 	                break;
 	            case 2:
-	            	
+	            	registerNewGame();
 	                break;
 	            case 3:
 	            	
@@ -80,8 +80,13 @@ public class Menu {
 	}
 	
 	public void printCatalogue() {
-//		catalogueManagement.printAllCatalogue();
+		catalogueManagement.printAllCatalogue();
 		start();
+	}
+	
+	public void registerNewGame() {
+		catalogueManagement.registerNewGame();
+		System.out.println("Game added successfully!");
 	}
 	
 }
