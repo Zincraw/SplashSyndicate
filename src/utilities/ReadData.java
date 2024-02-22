@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ReadData {
+	@SuppressWarnings("resource")
 	public static int readInt() {
 		return new Scanner(System.in).nextInt();
 	}
@@ -13,6 +14,7 @@ public class ReadData {
 		return readInt();
 	}
 
+	@SuppressWarnings("resource")
 	public static String readString() {
 		return new Scanner(System.in).nextLine();
 	}
