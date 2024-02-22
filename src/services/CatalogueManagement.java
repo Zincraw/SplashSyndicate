@@ -88,7 +88,16 @@ public class CatalogueManagement {
 	public Game addNewGameData() {
 		Game game = new Game();
 		
-		game.setName(ReadData.readString("What's the game's name?"));
+		boolean isGameExisting = true;
+		String gameName ="";
+		while(isGameExisting) {
+			gameName = ReadData.readString("What's the game's name?");
+			isGameExisting = Validate.isGameExisting(catalogue, gameName);
+			if(isGameExisting) {
+				System.out.println("Game already exists.");
+			}
+		}
+		game.setName(gameName);
 		game.setPlatform(ReadData.readString("In which platform can be played?"));
 	
 		game.setGenre(chooseGenre());

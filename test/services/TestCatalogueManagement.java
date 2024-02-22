@@ -11,6 +11,8 @@ import java.nio.file.Paths;
 import org.junit.Test;
 
 import data.Catalogue;
+import model.Game;
+import model.Genre;
 
 public class TestCatalogueManagement {
 	
@@ -56,7 +58,39 @@ public class TestCatalogueManagement {
 		System.setOut(new PrintStream(outContent));
 		catalogueManagement.printAllCatalogue();		
 
-		int printedGamesCount = outContent.toString().split("\n").length / 7;
+		int printedGamesCount = outContent.toString().split("\n").length / 6;
+		int CatalogueGamesCount = catalogueManagement.getCatalogue().getData().size();
+		assertEquals(printedGamesCount, CatalogueGamesCount );
+	}
+	
+	@Test
+	public void isExistedGameDeniedTrue() {
+		CatalogueManagement catalogueManagement = new CatalogueManagement();
+		Catalogue catalogue = catalogueManagement.getCatalogue();
+		Genre action = Genre.ACTION;
+				
+		Game gameTest = new Game("lol", "PC", action, 2009, "Riot");
+		catalogue.registerNewGame(gameTest);
+		int CatalogueGamesCount = catalogue.getData().size();
+		
+		catalogueManagement.registerNewGame();
+		int NewCatalogueGamesCount = catalogue.getData().size();
+		
+		assertEquals(CatalogueGamesCount, NewCatalogueGamesCount );
+	}
+	
+	@Test
+	public void isGameSuccesfullyAdded() {
+		CatalogueManagement catalogueManagement = new CatalogueManagement();
+		
+		catalogueManagement.registerNewGame();
+
+		ByteArrayOutputStream outContent = new ByteArrayOutputStream ();
+		
+		System.setOut(new PrintStream(outContent));
+		catalogueManagement.printAllCatalogue();		
+
+		int printedGamesCount = outContent.toString().split("\n").length / 6;
 		int CatalogueGamesCount = catalogueManagement.getCatalogue().getData().size();
 		assertEquals(printedGamesCount, CatalogueGamesCount );
 	}
