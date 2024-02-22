@@ -56,7 +56,7 @@ public class TestCatalogueManagement {
 		System.setOut(new PrintStream(outContent));
 		catalogueManagement.printAllCatalogue();		
 
-		int printedGamesCount = outContent.toString().split("\n").length / 7;
+		int printedGamesCount = outContent.toString().split("\n").length / 6;
 		int CatalogueGamesCount = catalogueManagement.getCatalogue().getData().size();
 		assertEquals(printedGamesCount, CatalogueGamesCount );
 	}
