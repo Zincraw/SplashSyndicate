@@ -34,4 +34,15 @@ public class ReadData {
 			return valReadInt();
 		}
 	}
+	
+	public static String valReadString() {
+		String data = "";
+		try {
+			data = readString();
+			return data;
+		} catch (InputMismatchException ex) {
+			System.out.println("You must put a String. Try again");
+			return valReadString();
+		}
+	}
 }

@@ -13,7 +13,23 @@ import data.Catalogue;
 public class TestCatalogueManagement {
 	
 	@Test
-	public void isGameLoadEqualsToCSVLinesPU01() {
+	public void isGameLoadedCorrectlyTrue() {
+
+		Catalogue catalogue = new Catalogue();
+		int numberOfLines = 0;
+		
+		Path path = Paths.get("src/resources/vgsales.csv");
+		
+		try {
+			numberOfLines = (int) Files.lines(path).count();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		assertEquals(numberOfLines, catalogue.getMap().size() + 1);
+	}
+	
+	@Test
+	public void isGameLoadedCorrectlyFalse() {
 		Catalogue catalogue = new Catalogue();
 		int numberOfLines = 0;
 		
@@ -25,7 +41,6 @@ public class TestCatalogueManagement {
 			e.printStackTrace();
 		}
 		
-		//if ((numberOfLines + 1) == catalogue.getMap().size())) System.out.println("asfdasf");
-		assertEquals(numberOfLines + 1, catalogue.getMap().size());
+		assertEquals(numberOfLines, catalogue.getMap().size());
 	}
 }
