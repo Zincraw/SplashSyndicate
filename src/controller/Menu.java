@@ -46,15 +46,16 @@ public class Menu {
 	            	filterGamesByPlatform();
 	                break;
 	            case 5:
-	            	
+	            	filterGamesByPublisher();
 	                break;
 	            case 6:
-	            	
+	            	filterGamesByXXCentury();
 	                break;
 	            case 7:
-	                break;
+
+	            	break;
 	            case 8:
-	            	
+	            	filterGamesByOddYear();
 	                break;
 	            case 0:
 	                System.out.println("See you next time!");
@@ -100,4 +101,13 @@ public class Menu {
 	public void filterGamesByPlatform() {
 		catalogueManagement.filterGamesByPlatform();
 	}
+	
+	public void filterGamesByXXCentury() {
+		catalogueManagement.filterGamesByXXCentury();
+	}
+	
+	public void filterGamesByOddYear() {
+		catalogueManagement.filterGamesByOddYear();
+	}
+
 }
