@@ -40,10 +40,10 @@ public class Menu {
 	            	registerNewGame();
 	                break;
 	            case 3:
-	            	
+	            	filterGamesByGenre();
 	            	break;
 	            case 4:
-	            	
+	            	filterGamesByPlatform();
 	                break;
 	            case 5:
 	            	
@@ -89,4 +89,11 @@ public class Menu {
 		System.out.println("Game added successfully!");
 	}
 	
+	public void filterGamesByGenre() {
+		catalogueManagement.filterGamesByGenre();
+	}
+	
+	public void filterGamesByPlatform() {
+		catalogueManagement.filterGamesByPlatform();
+	}
 }
