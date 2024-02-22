@@ -1,6 +1,11 @@
 package services;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.TreeSet;
 
 import data.Catalogue;
 import model.Game;
@@ -119,4 +124,51 @@ public class CatalogueManagement {
         
 	    return genre; 
 	}
+	
+	public void filterGamesByPublisher(){
+		Map<Integer, Game> catalogueMap = this.catalogue.getMap();
+		HashSet<String> uniquePublishers = new HashSet<>();
+		
+		for(Map.Entry<Integer, Game> map : catalogueMap.entrySet()) {
+			Game game = map.getValue();
+			uniquePublishers.add(game.getPublisher());
+		}
+		
+		TreeSet<String> uniquePublishersSorted = new TreeSet<String>(uniquePublishers);
+		
+		System.out.println("Listado de Publishers unicos");
+		for(String name : uniquePublishersSorted) {
+			System.out.println(name);
+		}
+	}
+
+	public void filterGamesByXXCentury() {
+		Map<Integer, Game> catalogueMap = this.catalogue.getMap();
+		
+		for(Map.Entry<Integer, Game> map : catalogueMap.entrySet()) {
+			Game game = map.getValue();
+			
+			if(game.getYear()<2000 && game.getYear()>=0) {
+				System.out.println("Name: " + game.getName());
+				System.out.println("Year: " + game.getYear());
+				System.out.println("********************************");
+			}
+		}		
+	}
+	
+	public void filterGamesByOddYear() {
+		Map<Integer, Game> catalogueMap = this.catalogue.getMap();
+		
+		for(Map.Entry<Integer, Game> map : catalogueMap.entrySet()) {
+			Game game = map.getValue();
+						
+			if(game.getYear()%2==0 && game.getYear()>=0) {
+				System.out.println("Name: " + game.getName());
+				System.out.println("Year: " + game.getYear());
+				System.out.println("********************************");
+			}		
+		}
+	}
+
+
 }
