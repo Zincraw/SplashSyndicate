@@ -66,4 +66,7 @@ public class Catalogue {
 		return newId;
 	}
 	
+	public Map<Integer, Game> getData() {
+		return getMap();
+	}
 }
