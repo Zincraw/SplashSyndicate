@@ -52,7 +52,7 @@ public class Menu {
 	            	filterGamesByXXCentury();
 	                break;
 	            case 7:
-
+	            	filterGamesByChosenGenre();
 	            	break;
 	            case 8:
 	            	filterGamesByOddYear();
@@ -104,6 +104,10 @@ public class Menu {
 	
 	public void filterGamesByXXCentury() {
 		catalogueManagement.filterGamesByXXCentury();
+	}
+	
+	public void filterGamesByChosenGenre() {
+		catalogueManagement.filterGamesByChosenGenre();
 	}
 	
 	public void filterGamesByOddYear() {
