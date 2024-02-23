@@ -156,6 +156,27 @@ public class CatalogueManagement {
 		}		
 	}
 	
+	public void filterGamesByChosenGenre() {
+		Map<Integer, Game> catalogueMap = this.catalogue.getMap();
+		Game game = new Game();
+		
+		Genre genre = chooseGenre();
+		System.out.println("List of " + genre.getGenre() + " games:");
+		
+		for(Map.Entry<Integer, Game> map : catalogueMap.entrySet()) {
+			game = map.getValue();
+			String genreString = game.getGenre().getGenre();
+			
+			if(genreString == genre.getGenre()) {
+				System.out.println("Name: " + game.getName());
+				System.out.println("Platform: " + game.getPlatform());
+				System.out.println("Year: " + game.getYear());
+				System.out.println("Publisher: " + game.getPublisher());
+				System.out.println("********************************");
+			}
+		}
+	}
+	
 	public void filterGamesByOddYear() {
 		Map<Integer, Game> catalogueMap = this.catalogue.getMap();
 		
